@@ -1,6 +1,6 @@
 {
   "private": false,
-  "nps": 5500000,
+  "nps": 8000000,
   "source": "https://github.com/Someon1e/encrustant",
 
   "build": {
