@@ -7,13 +7,13 @@ a:active {
 }
 
 body {
-    --color1: #222222;
-    --color2: #2d2d2d;
-    --color3: #3b3b3b;
+    --color1: rgb(45, 40, 40);
+    --color2: rgb(55, 50, 50);
+    --color3: rgb(55, 50, 50);
 
-    --color-font1: #dbdee1;
-    --color-font2: #949ba4;
-    --color-font3: #008f11;
+    --color-font1: rgb(220, 190, 190);
+    --color-font2: rgb(169, 150, 150);
+    --color-font3: #b7410e;
 
     background-color: var(--color1);
 
@@ -102,7 +102,7 @@ main {
 }
 
 #content .stripes th {
-    background-color: black;
+    background-color: rgb(10, 10, 10);
 }
 
 /* Tables that have hoverable table rows */
@@ -215,7 +215,7 @@ main {
 }
 
 #content .btn-blue {
-    background-color: #1c2d40;
+    background-color: #732028;
 }
 
 #content .btn-start {
@@ -240,7 +240,7 @@ main {
 }
 
 #content .btn-blue:hover {
-    background-color: #2e3f57;
+    background-color: #932a34;
 }
 
 #content .btn-start:hover {
@@ -279,28 +279,29 @@ main {
 
 #content .statblock {
     font-size: 13px;
-    color: black;
+    color: rgb(174, 170, 160);
+
     line-height: 92%;
-    background-color: #cccccc;
+    background-color: rgba(90, 90, 90, 0.6);
     font-family: "Fira Mono";
     border-radius: 4px;
     padding: 7px 10px 4px;
 }
 
 #content .statblock-green {
-    background-color: #76d576;
+    background-color: rgba(34, 187, 45, 0.6);
 }
 
 #content .statblock-blue {
-    background-color: #60f0ff;
+    background-color: rgba(80, 160, 240, 0.6);
 }
 
 #content .statblock-yellow {
-    background-color: #eff891;
+    background-color: #a97a02;
 }
 
 #content .statblock-red {
-    background-color: #fa9696;
+    background-color: rgba(165, 0, 0, 0.6);
 }
 
 #content .redlink {
