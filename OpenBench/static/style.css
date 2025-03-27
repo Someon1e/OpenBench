@@ -1,26 +1,30 @@
-
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none;
-    color: #8BBAD6;
+    color: #8bbad6;
 }
 
 body {
     --color1: #222222;
-    --color2: #2D2D2D;
-    --color3: #3B3B3B;
+    --color2: #2d2d2d;
+    --color3: #3b3b3b;
 
-    --color-font1: #DBDEE1;
-    --color-font2: #949BA4;
-    --color-font3: #008F11;
+    --color-font1: #dbdee1;
+    --color-font2: #949ba4;
+    --color-font3: #008f11;
 
     background-color: var(--color1);
 
     font-size: 16px;
-    font-family: "Courier Prime", serif;
-    display:flex;
+    font-family: "Fira Mono", monospace;
+    display: flex;
 }
 
-body, html, main{
+body,
+html,
+main {
     padding: 0;
     margin: 0;
     min-width: 100%;
@@ -37,7 +41,7 @@ body, html, main{
     display: none;
 }
 
-#content-parent{
+#content-parent {
     flex-grow: 1;
     justify-content: left;
     height: 100%;
@@ -48,7 +52,7 @@ body, html, main{
 }
 
 #content {
-    max-width: calc(min(100%,1000px));
+    max-width: calc(min(100%, 1000px));
     width: 100%;
     white-space: nowrap;
     display: inline-block;
@@ -62,7 +66,7 @@ body, html, main{
 
 #sidebar li {
     padding: 4px 16px 2px;
-    font-size: 1.0rem;
+    font-size: 1rem;
     border-radius: 4px;
     transition: background-color 0.2s ease-in-out;
 }
@@ -111,7 +115,7 @@ body, html, main{
     background-color: #323232;
 }
 
-#content .hoverable tr:hover{
+#content .hoverable tr:hover {
     background-color: var(--color1);
 }
 
@@ -153,12 +157,14 @@ body, html, main{
 
 /* Table Spacer for chaining Tables as a hack */
 
-#content .table-spacer th, #content .table-spacer tr {
+#content .table-spacer th,
+#content .table-spacer tr {
     background-color: var(--color1);
     height: 1rem;
 }
 
-#content .table-spacer-small th, #content .table-spacer-small tr {
+#content .table-spacer-small th,
+#content .table-spacer-small tr {
     background-color: #171717;
     height: 0.4rem;
     padding: 0px;
@@ -176,7 +182,8 @@ body, html, main{
     border-bottom: 1px #444444 solid;
 }
 
-#content th, #content td {
+#content th,
+#content td {
     padding: 10px 12px 6px 12px;
 }
 
@@ -202,17 +209,17 @@ body, html, main{
     display: inline-block;
     text-align: center;
     transition: background-color 0.3s ease;
-    font-family: "Courier Prime", serif;
+    font-family: "Fira Mono", monospace;
     font-size: 13px;
     cursor: pointer;
 }
 
 #content .btn-blue {
-    background-color: #1C2D40;
+    background-color: #1c2d40;
 }
 
 #content .btn-start {
-    background-color: #384A5F;
+    background-color: #384a5f;
     width: 100%;
 }
 
@@ -221,11 +228,11 @@ body, html, main{
 }
 
 #content .btn-yellow {
-    background-color: #7A4E09;
+    background-color: #7a4e09;
 }
 
 #content .btn-red {
-    background-color: #74261E;
+    background-color: #74261e;
 }
 
 #content .btn-disabled {
@@ -233,11 +240,11 @@ body, html, main{
 }
 
 #content .btn-blue:hover {
-    background-color: #2E3F57;
+    background-color: #2e3f57;
 }
 
 #content .btn-start:hover {
-    background-color: #2E3F57;
+    background-color: #2e3f57;
 }
 
 #content .btn-preset:hover {
@@ -245,11 +252,11 @@ body, html, main{
 }
 
 #content .btn-yellow:hover {
-    background-color: #9B6B0F;
+    background-color: #9b6b0f;
 }
 
 #content .btn-red:hover {
-    background-color: #8E3D28;
+    background-color: #8e3d28;
 }
 
 #content .btn-disabled:hover {
@@ -261,7 +268,6 @@ body, html, main{
 #content .copy-button {
     color: var(--color-font2);
     transition: color 0.2s ease-in-out;
-
 }
 
 #content .copy-button:hover {
@@ -275,30 +281,30 @@ body, html, main{
     font-size: 13px;
     color: black;
     line-height: 92%;
-    background-color: #CCCCCC;
-    font-family: "Courier New";
+    background-color: #cccccc;
+    font-family: "Fira Mono";
     border-radius: 4px;
     padding: 7px 10px 4px;
 }
 
 #content .statblock-green {
-    background-color: #76D576;
+    background-color: #76d576;
 }
 
 #content .statblock-blue {
-    background-color: #60F0FF;
+    background-color: #60f0ff;
 }
 
 #content .statblock-yellow {
-    background-color: #EFF891;
+    background-color: #eff891;
 }
 
 #content .statblock-red {
-    background-color: #FA9696;
+    background-color: #fa9696;
 }
 
 #content .redlink {
-    color: #FF4D4D;
+    color: #ff4d4d;
 }
 
 /* Long StatBlock which we can copy */
@@ -307,7 +313,7 @@ body, html, main{
     background-color: var(--color3);
     color: var(--color-font2);
     border-radius: 4px;
-    padding: 0.50rem 0.75rem;
+    padding: 0.5rem 0.75rem;
 }
 
 /* Test Views */
@@ -326,7 +332,7 @@ body, html, main{
 }
 
 #content .test-config {
-    font-size: 1.0rem;
+    font-size: 1rem;
 }
 
 #content .test-config .td-label {
@@ -358,19 +364,18 @@ td pre {
 
 #content .default-network {
     color: var(--color-font3);
-    transform: scale(1.10);
+    transform: scale(1.1);
 }
 
 #content .was-default-network {
-    color: #EFF891;
-    transform: scale(0.90);
+    color: #eff891;
+    transform: scale(0.9);
 }
 
 #content .non-default-network {
     color: var(--color-font1);
-    transform: scale(0.70);
+    transform: scale(0.7);
 }
-
 
 #content .numeric {
     text-align: right;
@@ -437,7 +442,7 @@ td pre {
 
     #content-header h2 {
         /* Adjust the font size to the screen width, ensuring that the title doesn't overflow */
-        font-size: clamp(1.0rem, 4.8vw, 1.4rem);
+        font-size: clamp(1rem, 4.8vw, 1.4rem);
         margin: 8px 0;
     }
 

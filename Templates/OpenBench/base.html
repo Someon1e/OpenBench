@@ -1,33 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+/>
 
 <html lang="en">
-
     {% load static %}
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="icon" type="image/svg+xml" href="{% static 'logo.svg' %}?{{ static_version }}">
-        <link rel="stylesheet" href="{% static 'style.css' %}?{{ static_version }}">
-        <link rel="stylesheet" href="{% static 'base.css' %}?{{ static_version }}">
-        <link rel="stylesheet" href="{% static 'form.css' %}?{{ static_version }}">
-        <link rel="stylesheet" href="{% static 'paging.css' %}?{{ static_version }}">
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="{% static 'logo.svg' %}?{{ static_version }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{% static 'style.css' %}?{{ static_version }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{% static 'base.css' %}?{{ static_version }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{% static 'form.css' %}?{{ static_version }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{% static 'paging.css' %}?{{ static_version }}"
+        />
 
-        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' rel='stylesheet'>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            rel="stylesheet"
+        />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+            rel="stylesheet"
+        />
 
         <title>OpenBench</title>
 
-        {% block scripts %}
-        {% endblock %}
+        {% block scripts %} {% endblock %}
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    {
+                        var timestamps =
+                            document.getElementsByClassName("timestamp");
 
-                {
-                    var timestamps = document.getElementsByClassName('timestamp');
+                        var options = {
+                            year: "numeric",
+                            month: "2-digit",
+                            day: "2-digit",
+                            hour: "2-digit",
+                            minute: "2-digit",
+                            second: "2-digit",
+                            hour12: false,
+                        };
 
                     var options = {
                         year   : 'numeric', month  : '2-digit',
@@ -40,15 +78,15 @@
                         var date = new Date(1000 * timestamps[i].textContent);
                         timestamps[i].textContent = date.toLocaleString(undefined, options);
                     }
-                }
 
-                {
-                    var datestamps = document.getElementsByClassName('datestamp');
+                    {
+                        var datestamps =
+                            document.getElementsByClassName("datestamp");
 
-                    var options = {
-                        month  : 'short',
-                        day    : '2-digit',
-                    };
+                        var options = {
+                            month: "short",
+                            day: "2-digit",
+                        };
 
                     for (var i = 0; i < datestamps.length; i++) {
                         var date = new Date(1000 * datestamps[i].textContent);
@@ -84,75 +122,152 @@
             }, false);
 
             function toggle_sidebar() {
-                document.body.classList.toggle('sidebar-open')
+                document.body.classList.toggle("sidebar-open");
             }
         </script>
     </head>
 
     <body>
-
         <div id="sidebar">
-
             <ul>
                 <li class="header">Admin</li>
                 {% if user.is_authenticated %}
-                    <li><a href="/logout/"><i class="fa-solid fa-right-from-bracket fa-fw"></i> Logout</a></li>
-                    <li><a href="/profile/"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+                <li>
+                    <a href="/logout/"
+                        ><i class="fa-solid fa-right-from-bracket fa-fw"></i>
+                        Logout</a
+                    >
+                </li>
+                <li>
+                    <a href="/profile/"
+                        ><i class="fa-solid fa-user fa-fw"></i> Profile</a
+                    >
+                </li>
                 {% else %}
-                    <li><a href="/login"><i class="fa-solid fa-right-to-bracket fa-fw"></i> Login</a></li>
-                    <li><a href="/register"><i class="fa-solid fa-registered fa-fw"></i> Register</a></li>
+                <li>
+                    <a href="/login"
+                        ><i class="fa-solid fa-right-to-bracket fa-fw"></i>
+                        Login</a
+                    >
+                </li>
+                <li>
+                    <a href="/register"
+                        ><i class="fa-solid fa-registered fa-fw"></i>
+                        Register</a
+                    >
+                </li>
                 {% endif %}
             </ul>
 
-            <hr>
+            <hr />
 
             <ul>
                 <li class="header">Tests</li>
-                <li><a href="/index"><i class="fa-solid fa-house fa-fw"></i> Index</a></li>
-                <li><a href="/greens"><i class="fa-solid fa-heart fa-fw"></i> Greens</a></li>
-                <li><a href="/search"><i class="fa-solid fa-magnifying-glass fa-fw"></i> Search</a></li>
+                <li>
+                    <a href="/index"
+                        ><i class="fa-solid fa-house fa-fw"></i> Index</a
+                    >
+                </li>
+                <li>
+                    <a href="/greens"
+                        ><i class="fa-solid fa-heart fa-fw"></i> Greens</a
+                    >
+                </li>
+                <li>
+                    <a href="/search"
+                        ><i class="fa-solid fa-magnifying-glass fa-fw"></i>
+                        Search</a
+                    >
+                </li>
             </ul>
 
-            <hr>
+            <hr />
 
             <ul>
                 <li class="header">Actions</li>
-                <li><a href="/test/new/"><i class="fa-solid fa-plus fa-fw"></i> Create Test</a></li>
-                <li><a href="/tune/new/"><i class="fa-solid fa-vial fa-fw"></i> Create Tune</a></li>
-                <li><a href="/datagen/new/"><i class="fa-solid fa-database fa-fw"></i> Create Datagen</a></li>
-                <li><a href="/newNetwork"><i class="fa-solid fa-upload fa-fw"></i> Upload Net</a></li>
+                <li>
+                    <a href="/test/new/"
+                        ><i class="fa-solid fa-plus fa-fw"></i> Create Test</a
+                    >
+                </li>
+                <li>
+                    <a href="/tune/new/"
+                        ><i class="fa-solid fa-vial fa-fw"></i> Create Tune</a
+                    >
+                </li>
+                <li>
+                    <a href="/datagen/new/"
+                        ><i class="fa-solid fa-database fa-fw"></i> Create
+                        Datagen</a
+                    >
+                </li>
+                <li>
+                    <a href="/newNetwork"
+                        ><i class="fa-solid fa-upload fa-fw"></i> Upload Net</a
+                    >
+                </li>
             </ul>
 
-            <hr>
+            <hr />
 
             <ul>
                 <li class="header">Info</li>
-                <li><a href="/users"><i class="fa-solid fa-users fa-fw"></i> Users</a></li>
-                <li><a href="/events"><i class="fa-solid fa-circle-exclamation fa-fw"></i> Events</a></li>
-                <li><a href="/errors"><i class="fa-solid fa-exclamation-triangle fa-fw"></i> Errors</a></li>
-                <li><a href="/machines"><i class="fa-solid fa-microchip fa-fw"></i> Machines</a></li>
-                <li><a href="/networks"><i class="fa-solid fa-circle-nodes fa-fw"></i> Networks</a></li>
+                <li>
+                    <a href="/users"
+                        ><i class="fa-solid fa-users fa-fw"></i> Users</a
+                    >
+                </li>
+                <li>
+                    <a href="/events"
+                        ><i class="fa-solid fa-circle-exclamation fa-fw"></i>
+                        Events</a
+                    >
+                </li>
+                <li>
+                    <a href="/errors"
+                        ><i class="fa-solid fa-exclamation-triangle fa-fw"></i>
+                        Errors</a
+                    >
+                </li>
+                <li>
+                    <a href="/machines"
+                        ><i class="fa-solid fa-microchip fa-fw"></i> Machines</a
+                    >
+                </li>
+                <li>
+                    <a href="/networks"
+                        ><i class="fa-solid fa-circle-nodes fa-fw"></i>
+                        Networks</a
+                    >
+                </li>
             </ul>
 
-            <hr>
+            <hr />
 
             <ul>
                 <li class="header">Support</li>
-                <li><a href="{{config.client_repo_url}}"><i class="fa-brands fa-github fa-fw"></i> OpenBench</a></li>
-                <li><a href="https://discord.gg/9MVg7fBTpM"><i class="fa-brands fa-discord fa-fw"></i> Discord</a></li>
+                <li>
+                    <a href="{{config.client_repo_url}}"
+                        ><i class="fa-brands fa-github fa-fw"></i> OpenBench</a
+                    >
+                </li>
+                <li>
+                    <a href="https://discord.gg/9MVg7fBTpM"
+                        ><i class="fa-brands fa-discord fa-fw"></i> Discord</a
+                    >
+                </li>
             </ul>
 
-            <hr>
+            <hr />
 
             <ul>
                 <li class="header">Engines</li>
                 {% for engine, data in config.engines.items %}
-                    <li><a href="{{data.source}}">{{engine}}</a></li>
+                <li><a href="{{data.source}}">{{engine}}</a></li>
                 {% endfor %}
             </ul>
 
-            <hr>
-
+            <hr />
         </div>
 
         <div id="content-parent">
@@ -162,30 +277,25 @@
                         <i class="fa-solid fa-bars fa-fw"></i>
                     </button>
                     <h2>
-                        <a class="site-title" href="/">OpenBench&nbsp;Testing&nbsp;Framework</a>
+                        <a class="site-title" href="/"
+                            >OpenBench&nbsp;Testing&nbsp;Framework</a
+                        >
                     </h2>
                 </div>
 
                 {% if request.session.error_message %}
-                    <div class="error-message">
-                        <pre>{{request.session.error_message}}</pre>
-                    </div>
-                {% endif %}
-
-                {% if request.session.warning_message %}
-                    <div class="warning-message">
-                        <pre>{{request.session.warning_message}}</pre>
-                    </div>
-                {% endif %}
-
-                {% if request.session.status_message %}
-                    <div class="status-message">
-                        <pre>{{request.session.status_message}}</pre>
-                    </div>
-                {% endif %}
-
-                {% block content %}
-                {% endblock %}
+                <div class="error-message">
+                    <pre>{{request.session.error_message}}</pre>
+                </div>
+                {% endif %} {% if request.session.warning_message %}
+                <div class="warning-message">
+                    <pre>{{request.session.warning_message}}</pre>
+                </div>
+                {% endif %} {% if request.session.status_message %}
+                <div class="status-message">
+                    <pre>{{request.session.status_message}}</pre>
+                </div>
+                {% endif %} {% block content %} {% endblock %}
             </div>
         </div>
     </body>
