@@ -24,6 +24,8 @@
   ],
 
   "engines": [
+    "Encrustant",
+
     "4ku",
     "Berserk",
     "Bit-Genie",
@@ -43,7 +45,6 @@
     "Stockfish",
     "Weiss",
     "Winter",
-    "Zahak",
-    "Encrustant"
+    "Zahak"
   ]
 }
