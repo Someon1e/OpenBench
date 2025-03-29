@@ -279,6 +279,7 @@ main {
 
 #content .statblock {
     font-size: 13px;
+    font-weight: lighter;
     color: rgb(174, 170, 160);
 
     text-shadow:
