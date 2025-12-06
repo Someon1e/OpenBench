@@ -83,11 +83,11 @@
 
             <!-- Restart Button: For Approvers or Workload Authors of finished workloads -->
             {% if workload.finished and not workload.passed and not workload.failed and profile.approver %}
-                <a class="anchorbutton btn-yellow" href="/{{type|lower}}/{{workload.id}}/RESTART">Restart</a>
+                <a class="anchorbutton btn-yellow" href="/{{type|lower}}/{{workload.id}}/RESTART">Resume</a>
             {% elif workload.finished and not workload.passed and not workload.failed and profile.user.username == workload.author %}
-                <a class="anchorbutton btn-yellow" href="/{{type|lower}}/{{workload.id}}/RESTART">Restart</a>
+                <a class="anchorbutton btn-yellow" href="/{{type|lower}}/{{workload.id}}/RESTART">Resume</a>
             {% elif workload.finished %}
-                <a class="anchorbutton btn-disabled">Restart</a>
+                <a class="anchorbutton btn-disabled">Resume</a>
             {% endif %}
 
             <!-- Stop Button: For Approvers or Workload Authors of active workloads -->
